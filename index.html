@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نظام الرفوف الجدارية الملكي - عصري وأنيق</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Tajawal', sans-serif; }
+
+body {
+  background: linear-gradient(135deg, #f0f2f5 0%, #ffffff 50%, #e0e6ed 100%);
+  min-height: 100vh; color: #2c3e50; overflow-x: hidden;
+}
+
+/* ===== PARTICLES ===== */
+.particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: hidden; }
+.particle { position: absolute; border-radius: 50%; animation: floatUp linear infinite; opacity: 0.3; }
+@keyframes floatUp {
+  0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.3; }
+  100% { transform: translateY(-100px) rotate(720deg); opacity: 0; }
+}
+
+/* ===== HEADER ===== */
+.header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 14px 20px; text-align: center;
+  position: sticky; top: 0; z-index: 100;
+}
+.header h1 {
+  font-size: 1.1rem; font-weight: 700; color: #34495e;
+}
+.badge {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  color: #fff; padding: 4px 12px; border-radius: 20px;
+  font-size: 0.8rem; font-weight: 900; margin-right: 8px;
+}
+
+.container { max-width: 900px; margin: 0 auto; padding: 25px 20px; position: relative; z-index: 1; }
+
+/* ===== HERO ===== */
+.hero {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 28px; padding: 35px 20px;
+  text-align: center; margin-bottom: 25px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.hero-title {
+  font-size: 2.2rem; font-weight: 900; color: #2c3e50;
+  margin-bottom: 10px; animation: fadeDown 0.8s ease;
+}
+.hero-sub { font-size: 1rem; color: #7f8c8d; margin-bottom: 25px; }
+
+/* ===== IMAGE 3D ===== */
+.img-wrapper { position: relative; width: 100%; margin: 10px auto 25px; }
+.product-img {
+  width: 100%; max-width: 550px; height: auto;
+  border-radius: 20px; display: block; margin: 0 auto;
+  animation: img3d 6s ease-in-out infinite;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+@keyframes img3d {
+  0%,100% { transform: perspective(1000px) rotateY(0deg); }
+  50% { transform: perspective(1000px) rotateY(5deg) rotateX(2deg); }
+}
+
+/* ===== PRICE ===== */
+.price-box {
+  display: flex; justify-content: center; align-items: center;
+  gap: 15px; margin: 25px 0;
+}
+.new-price { font-size: 2.8rem; font-weight: 900; color: #27ae60; }
+.new-price span { font-size: 1.2rem; }
+.price-tag { background: #e74c3c; color: #fff; padding: 5px 15px; border-radius: 10px; font-weight: 700; }
+
+/* ===== SPECS GRID ===== */
+.specs-section {
+  background: #fff; border-radius: 22px; padding: 25px; margin-bottom: 25px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+}
+.specs-section h3 { margin-bottom: 20px; color: #2c3e50; font-size: 1.3rem; text-align: center;}
+.specs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+.spec-card {
+  background: #f9fbff; border: 1px solid #edf2f7;
+  border-radius: 15px; padding: 15px; display: flex; align-items: center; gap: 12px;
+}
+.spec-icon { font-size: 1.5rem; background: #fff; width: 45px; height: 45px; border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.spec-text b { display: block; color: #2c3e50; font-size: 0.95rem; }
+.spec-text span { color: #7f8c8d; font-size: 0.85rem; }
+
+/* ===== SECONDARY IMAGE ===== */
+.secondary-image { width: 100%; border-radius: 20px; margin-top: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+
+/* ===== FORM ===== */
+.form-section {
+  background: #fff; border: 2px solid #3498db;
+  border-radius: 28px; padding: 35px 25px;
+  box-shadow: 0 15px 50px rgba(52, 152, 219, 0.1);
+}
+.form-section h2 { text-align: center; color: #2980b9; font-size: 1.8rem; margin-bottom: 10px; }
+.form-section .sub { text-align: center; color: #7f8c8d; margin-bottom: 25px; }
+
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 700; color: #34495e; }
+.form-group input, .form-group select {
+  width: 100%; padding: 14px 18px; border: 1.5px solid #dcdde1;
+  border-radius: 12px; font-size: 1rem; color: #2c3e50; transition: 0.3s;
+}
+.form-group input:focus, .form-group select:focus { border-color: #3498db; outline: none; box-shadow: 0 0 10px rgba(52, 152, 219, 0.1); }
+
+/* ===== FLOATING BUTTONS ===== */
+.float-buttons { position: fixed; bottom: 25px; left: 25px; display: flex; flex-direction: column; gap: 12px; z-index: 99; }
+.order-float-btn {
+  background: linear-gradient(135deg, #e67e22, #f39c12);
+  color: #fff; padding: 14px 22px; border-radius: 50px;
+  font-weight: 900; text-decoration: none; box-shadow: 0 8px 25px rgba(230,126,34,0.4);
+  animation: pulse 2s infinite;
+}
+.whatsapp-float {
+  background: #25d366; color: #fff; width: 60px; height: 60px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 2rem; text-decoration: none; box-shadow: 0 8px 25px rgba(37,211,102,0.3);
+}
+@keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.05)} }
+
+/* ===== THANK YOU PAGE ===== */
+.thank-you-page {
+  display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: #fff; z-index: 9999; text-align: center; padding: 50px 20px;
+}
+
+@media (max-width: 600px) {
+  .hero-title { font-size: 1.7rem; }
+  .specs-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="particles" id="particles"></div>
+
+<div id="landingPage">
+  <div class="header">
+    <h1>🏗️ نظام الرفوف الجدارية <span class="badge">الأكثر مبيعاً</span></h1>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <h1 class="hero-title">الرفوف الجدارية الملكية</h1>
+      <p class="hero-sub">تصميم عصري "Minimalist" يجمع بين الأناقة والاستخدام العملي</p>
+      
+      <div class="img-wrapper">
+        <img src="https://i.postimg.cc/cCNvVSZs/Chat-GPT-Image-May-16-2026-03-49-33-PM.png" alt="الرفوف الجدارية" class="product-img" id="productImg">
+      </div>
+
+      <div class="price-box">
+        <span class="new-price" id="displayPrice">249 <span>DH</span></span>
+        <span class="price-tag">توصيل مجاني 🚚</span>
+      </div>
+
+      <p style="color: #7f8c8d; font-size: 0.9rem;">متوفر بـ 2 رفوف أو 3 رفوف حسب اختيارك</p>
+    </div>
+
+    <div class="specs-section">
+      <h3>📏 المواصفات الفنية</h3>
+      <div class="specs-grid">
+        <div class="spec-card">
+          <div class="spec-icon">📏</div>
+          <div class="spec-text"><b>طول الرف</b><span>100 سم (1 متر)</span></div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-icon">📐</div>
+          <div class="spec-text"><b>العمق (العرض)</b><span>20 سم</span></div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-icon">🏗️</div>
+          <div class="spec-text"><b>المثبت الحديدي</b><span>100 سم (1 متر)</span></div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-icon">✨</div>
+          <div class="spec-text"><b>التصميم</b><span>Slim Profile (-20% سمك)</span></div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-icon">⚪</div>
+          <div class="spec-text"><b>اللون</b><span>أبيض ناصع عصري</span></div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-icon">📐</div>
+          <div class="spec-text"><b>المسافات</b><span>25 سم بين الرفوف</span></div>
+        </div>
+      </div>
+      
+      <img src="https://i.postimg.cc/NfjsLMdW/gemini-3-pro-image-preview-2k-(nano-banana-pro)-b-bdl-rfyn-arydha-3-mt.png" alt="تفاصيل الرفوف" class="secondary-image">
+    </div>
+
+    <div class="form-section" id="order">
+      <h2>📝 اطلب الآن</h2>
+      <p class="sub">املأ المعلومات وسنتصل بك لتأكيد الطلب</p>
+      <form id="orderForm">
+        <div class="form-group">
+          <label>👤 الاسم الكامل *</label>
+          <input type="text" id="name" required placeholder="أدخل اسمك الكامل">
+        </div>
+        <div class="form-group">
+          <label>📱 رقم الهاتف *</label>
+          <input type="tel" id="phone" required placeholder="06XXXXXXXX">
+        </div>
+        <div class="form-group">
+          <label>🏙️ المدينة *</label>
+          <input type="text" id="city" required placeholder="أدخل مدينتك">
+        </div>
+        <div class="form-group">
+          <label>📦 اختر عدد الرفوف *</label>
+          <select id="shelfCount" required onchange="updatePrice()">
+            <option value="رفين (2 Shelves) - 249 DH">رفين (2 Shelves) - 249 DH</option>
+            <option value="3 رفوف (3 Shelves) - 349 DH" selected>3 رفوف (3 Shelves) - 349 DH</option>
+            <option value="4 رفوف (4 Shelves) - 449 DH">4 رفوف (4 Shelves) - 449 DH</option>
+          </select>
+        </div>
+        <button type="submit" style="width:100%; padding:20px; background:#27ae60; color:#fff; border:none; border-radius:12px; font-weight:900; font-size:1.2rem; cursor:pointer;">✅ تأكيد الطلب</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="float-buttons">
+    <a href="#order" class="order-float-btn">🛒 اطلب الآن</a>
+    <a href="https://wa.me/212629445977" class="whatsapp-float" target="_blank">💬</a>
+  </div>
+</div>
+
+<!-- THANK YOU -->
+<div class="thank-you-page" id="thankYouPage">
+  <div style="font-size: 5rem;">✅</div>
+  <h1>شكراً لك!</h1>
+  <p>تم استلام طلبك بنجاح. سيتصل بك فريقنا قريباً.</p>
+  <a href="/" style="display:inline-block; margin-top:20px; padding:10px 20px; background:#3498db; color:#fff; text-decoration:none; border-radius:10px;">العودة للموقع</a>
+</div>
+
+<script>
+function createParticles() {
+  const container = document.getElementById('particles');
+  for (let i = 0; i < 20; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.cssText = `width:10px;height:10px;background:#3498db;left:${Math.random()*100}%;animation-duration:${5+Math.random()*10}s;animation-delay:${Math.random()*5}s;`;
+    container.appendChild(p);
+  }
+}
+createParticles();
+
+function updatePrice() {
+  const select = document.getElementById('shelfCount');
+  const priceDisplay = document.getElementById('displayPrice');
+  if (select.value.includes('249')) priceDisplay.innerHTML = '249 <span>DH</span>';
+  else if (select.value.includes('349')) priceDisplay.innerHTML = '349 <span>DH</span>';
+  else priceDisplay.innerHTML = '449 <span>DH</span>';
+}
+
+document.getElementById('orderForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const city = document.getElementById('city').value;
+  const shelf = document.getElementById('shelfCount').value;
+
+  const msg = `🧱 *طلب جديد - نظام الرفوف الجدارية*\n━━━━━━━━━━━━━━━\n👤 *الاسم:* ${name}\n📱 *الهاتف:* ${phone}\n🏙️ *المدينة:* ${city}\n📦 *النوع:* ${shelf}\n━━━━━━━━━━━━━━━\n✅ يرجى التواصل لتأكيد الطلب`;
+  
+  window.open(`https://wa.me/212629445977?text=${encodeURIComponent(msg)}`, '_blank');
+  
+  document.getElementById('landingPage').style.display = 'none';
+  document.getElementById('thankYouPage').style.display = 'block';
+});
+</script>
+
+</body>
+</html>
